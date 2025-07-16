@@ -1,0 +1,26 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "INTROVIEW_BUTTON_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take a quiz"
+          }
+        }
+      }
+    },
+    "INTROVIEW_TITLE" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Online Personal\nStyling.\nOutfits for\nEvery Woman."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

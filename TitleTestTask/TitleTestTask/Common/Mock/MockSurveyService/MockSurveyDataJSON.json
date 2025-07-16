@@ -1,0 +1,109 @@
+{
+	"id": "style_survey_mock",
+	"pages": [
+		{
+			"id": "focus",
+			"screenTitle": "Lifestyle & Interests",
+			"title": "What’d you like our stylists to focus on?",
+			"description": "We offer services via live-chat mode.",
+			"type": "multiSelect",
+			"pageStyle": "list",
+			"continueButtonTitle": "Continue",
+			"cellStyle": "textOnly",
+			"options": [
+				{
+					"id": "reinvent_wardrobe",
+					"title": "Reinvent wardrobe",
+					"subtitle": "to discover fresh outfit ideas"
+				},
+				{
+					"id": "define_color_palette",
+					"title": "Define color palette",
+					"subtitle": "to enhance my natural features"
+				}
+			]
+		},
+		{
+			"id": "style",
+			"screenTitle": "Style preferences",
+			"title": "Which style best represents you?",
+			"type": "singleSelect",
+			"pageStyle": "grid-2",
+			"continueButtonTitle": "Continue",
+			"cellStyle": "image",
+			"options": [
+				{
+					"id": "casual",
+					"title": "CASUAL",
+					"imageUrl": "https://i.postimg.cc/nrn4WrDM/casual.png"
+				},
+				{
+					"id": "boho",
+					"title": "BOHO",
+					"imageUrl": "https://i.postimg.cc/0QYGZDrL/boho.png"
+				},
+				{
+					"id": "classy",
+					"title": "CLASSY",
+					"imageUrl": "https://i.postimg.cc/85QBhtkR/classy.png"
+				}
+			]
+		},
+		{
+			"id": "colors",
+			"screenTitle": "Style preferences",
+			"title": "Choose favourite colors",
+			"type": "multiSelect",
+			"pageStyle": "grid-3",
+			"continueButtonTitle": "Continue",
+			"cellStyle": "color",
+			"options": [
+				{
+					"id": "light_blue",
+					"title": "LIGHT BLUE",
+					"colorHex": "#ABE2FF"
+				},
+				{
+					"id": "blue",
+					"title": "BLUE",
+					"colorHex": "#5EA8FF"
+				},
+				{
+					"id": "indigo",
+					"title": "INDIGO",
+					"colorHex": "#2237A8"
+				},
+				{
+					"id": "turquoise",
+					"title": "Turquoise",
+					"colorHex": "#69D1ED"
+				},
+				{
+					"id": "mint",
+					"title": "Mint",
+					"colorHex": "#87DBC8"
+				},
+				{
+					"id": "olive",
+					"title": "Olive",
+					"colorHex": "#A8AD49"
+				},
+				{
+					"id": "green",
+					"title": "green",
+					"colorHex": "#29AD3E"
+				},
+				{
+					"id": "emerald",
+					"title": "Emerald",
+					"colorHex": "#098052"
+				},
+				{
+					"id": "yellow",
+					"title": "Yellow",
+					"colorHex": "#EDDD47"
+				}
+			]
+		}
+	]
+}
