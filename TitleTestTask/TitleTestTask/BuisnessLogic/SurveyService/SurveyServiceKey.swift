@@ -9,13 +9,17 @@ import Foundation
 import ComposableArchitecture
 
 struct SurveyServiceKey: DependencyKey {
-	static let liveValue: (Bool) -> SurveyServiceProtocol = { useMock in
-		useMock ? MockSurveyService() : SurveyService()
-	}
+	static let liveValue: SurveyServiceProtocol = {
+#if DEBUG
+		return MockSurveyService()
+#else
+		return SurveyService()
+#endif
+	}()
 }
 
 extension DependencyValues {
-	var surveyService: (Bool) -> SurveyServiceProtocol {
+	var surveyService: SurveyServiceProtocol {
 		get { self[SurveyServiceKey.self] }
 		set { self[SurveyServiceKey.self] = newValue }
 	}

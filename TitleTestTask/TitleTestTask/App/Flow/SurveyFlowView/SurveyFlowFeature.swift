@@ -13,7 +13,6 @@ struct SurveyFlowFeature: Reducer {
 		var survey: Survey?
 		var path = StackState<SurveyPageFeature.State>()
 		var answers: [String: Set<String>] = [:]
-		var useMock: Bool = false
 	}
 	
 	enum Action: Equatable {
@@ -33,7 +32,7 @@ struct SurveyFlowFeature: Reducer {
 			switch action {
 			case .introAppeared:
 				state.isLoading = true
-				return loadSurveyEffect(useMock: state.useMock)
+				return loadSurveyEffect()
 			case let .surveyLoaded(survey):
 				state.isLoading = false
 				state.survey = survey
@@ -78,10 +77,10 @@ struct SurveyFlowFeature: Reducer {
 }
 
 private extension SurveyFlowFeature {
-	func loadSurveyEffect(useMock: Bool) -> Effect<Action> {
+	func loadSurveyEffect() -> Effect<Action> {
 		.run { send in
 			do {
-				let survey = try await surveyService(useMock).getSurvey()
+				let survey = try await surveyService.getSurvey()
 				await send(.surveyLoaded(survey))
 			} catch {
 				await send(.dataLoadError)
