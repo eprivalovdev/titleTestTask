@@ -45,22 +45,11 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		DF0CFF872E27D806007F5DCF /* Exceptions for "TitleTestTask" folder in "Compile Sources" phase from "TitleTestTask" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = DF5146E12E2688CD001AF9B4 /* Sources */;
-			membershipExceptions = (
-				Common/Mock/MockSurveyService/MockSurveyDataJSON.json,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DF5146E72E2688CD001AF9B4 /* TitleTestTask */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				DF5147432E269409001AF9B4 /* Exceptions for "TitleTestTask" folder in "TitleTestTask" target */,
-				DF0CFF872E27D806007F5DCF /* Exceptions for "TitleTestTask" folder in "Compile Sources" phase from "TitleTestTask" target */,
 			);
 			path = TitleTestTask;
 			sourceTree = "<group>";

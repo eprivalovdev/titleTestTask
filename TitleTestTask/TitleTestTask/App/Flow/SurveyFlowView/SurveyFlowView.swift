@@ -13,7 +13,7 @@ struct SurveyFlowView: View {
 	
 	var body: some View {
 		NavigationStackStore(
-			store.scope(state: \.path, action: SurveyFlowFeature.Action.path)
+			store.scope(state: \.path, action: \.path)
 		) {
 			IntroView(store: store)
 		} destination: { store in

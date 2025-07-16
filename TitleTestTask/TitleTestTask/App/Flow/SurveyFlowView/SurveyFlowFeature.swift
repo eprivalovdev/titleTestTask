@@ -7,7 +7,8 @@
 
 import ComposableArchitecture
 
-struct SurveyFlowFeature: Reducer {
+@Reducer
+struct SurveyFlowFeature {
 	struct State: Equatable {
 		var isLoading: Bool = false
 		var survey: Survey?
@@ -70,7 +71,7 @@ struct SurveyFlowFeature: Reducer {
 				return .none
 			}
 		}
-		.forEach(\.path, action: /Action.path) {
+		.forEach(\.path, action: \.path) {
 			SurveyPageFeature()
 		}
 	}

@@ -7,7 +7,8 @@
 
 import ComposableArchitecture
 
-struct SurveyPageFeature: Reducer {
+@Reducer
+struct SurveyPageFeature {
 	struct State: Equatable, Identifiable {
 		let id: String
 		let surveyPage: SurveyPage
