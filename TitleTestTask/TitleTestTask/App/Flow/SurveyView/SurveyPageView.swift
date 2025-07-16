@@ -55,8 +55,14 @@ extension SurveyView {
 	private func bottomView(_ viewStore: ViewStoreOf<SurveyPageFeature>) -> some View {
 		ZStack(alignment: .bottom) {
 			VStack(spacing: .zero) {
-				LinearGradient(colors: [Color.white, Color.clear], startPoint: .bottom, endPoint: .top)
-				Color.white
+				LinearGradient(
+					stops: [
+						Gradient.Stop(color: Color.white, location: 0.5),
+						Gradient.Stop(color: Color.clear, location: 1)
+					],
+					startPoint: .bottom,
+					endPoint: .top
+				)
 			}
 			
 			Button {
