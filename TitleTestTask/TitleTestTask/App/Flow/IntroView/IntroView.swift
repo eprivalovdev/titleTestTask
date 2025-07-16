@@ -35,7 +35,10 @@ extension IntroView {
 	
 	private var gradientView: some View {
 		LinearGradient(
-			colors: [Color.black, Color.black.opacity(0)],
+			stops: [
+				Gradient.Stop(color: Color.black, location: 0.18),
+				Gradient.Stop(color: Color.black.opacity(0), location: 1)
+			],
 			startPoint: .bottom,
 			endPoint: .top
 		)
