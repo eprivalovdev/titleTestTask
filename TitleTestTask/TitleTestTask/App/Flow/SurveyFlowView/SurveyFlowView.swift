@@ -17,7 +17,7 @@ struct SurveyFlowView: View {
 		) {
 			IntroView(store: store)
 		} destination: { store in
-			SurveyView(store: store)
+			SurveyPageView(store: store)
 		}
 	}
 }

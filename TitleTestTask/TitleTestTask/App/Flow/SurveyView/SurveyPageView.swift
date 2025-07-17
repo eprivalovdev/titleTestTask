@@ -1,5 +1,5 @@
 //
-//  SurveyView.swift
+//  SurveyPageView.swift
 //  TitleTestTask
 //
 //  Created by Єгор Привалов on 15.07.2025.
@@ -8,7 +8,7 @@
 import ComposableArchitecture
 import SwiftUI
 
-struct SurveyView: View {
+struct SurveyPageView: View {
 	let store: StoreOf<SurveyPageFeature>
 	
 	var body: some View {
@@ -30,7 +30,7 @@ struct SurveyView: View {
 	}
 }
 
-extension SurveyView {
+extension SurveyPageView {
 	private func titleView(_ viewStore: ViewStoreOf<SurveyPageFeature>) -> some View {
 		VStack(alignment: .leading, spacing: 8) {
 			Text(viewStore.surveyPage.title)
@@ -72,6 +72,7 @@ extension SurveyView {
 			}
 			.buttonStyle(MainButtonStyle(buttonConfig: .light))
 			.padding(.bottom, 56)
+			.disabled(viewStore.selected.isEmpty)
 		}
 		.frame(height: 144)
 		.ignoresSafeArea(edges: .bottom)
@@ -119,7 +120,7 @@ extension SurveyView {
 	}
 }
 
-extension SurveyView {
+extension SurveyPageView {
 	@ViewBuilder
 	private func optionCell(option: SurveyOption, isSelected: Bool, style: CellStyle) -> some View {
 		switch style {
