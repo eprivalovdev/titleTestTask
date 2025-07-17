@@ -32,10 +32,16 @@ struct SurveyPageFeature {
 		Reduce { state, action in
 			switch action {
 			case .optionTapped(let optionId):
-				if state.selected.contains(optionId) {
-					state.selected.remove(optionId)
-				} else {
-					state.selected.insert(optionId)
+				let isSelected = state.selected.contains(optionId)
+				switch state.surveyPage.type {
+				case .multiSelect:
+					if isSelected {
+						state.selected.remove(optionId)
+					} else {
+						state.selected.insert(optionId)
+					}
+				case .singleSelect:
+					state.selected = isSelected ? [] : [optionId]
 				}
 				return .none
 			case .continueTapped:
